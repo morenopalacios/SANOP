@@ -1,4 +1,15 @@
 class Funcionario < ActiveRecord::Base
+
+
+def self.search(search, page)
+where(['upper(nombres) like ?',
+"%#{search}%".upcase]).paginate(page: page, per_page: 5).order("nombres")
+end
+
+
+
+
+
   belongs_to :tipodoc
   belongs_to :centro
 

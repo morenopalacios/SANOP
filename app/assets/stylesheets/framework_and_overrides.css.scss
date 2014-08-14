@@ -34,7 +34,7 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-image: url("fondo.png");
+  
   padding-bottom: 80px;
   width: 100%;
   margin-top: 100px; // accommodate the navbar

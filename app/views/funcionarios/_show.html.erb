@@ -1,3 +1,5 @@
+<div class='funcionario'> 
+
 <br><br><br><br><br><br><br>
 <div class="formulario">
 <p id="notice"><%= notice %></p>
@@ -108,5 +110,7 @@
 
 </div>
 
-<%= link_to 'Editar', edit_funcionario_path(@funcionario) %> |
+<%= button_to 'Editar', edit_funcionario_path(@funcionario),:method=>"get", class: "btn btn-primary btn-xs", remote: true  %>
 <%= link_to 'Atras', funcionarios_path %>
+<hr>
+</div>

@@ -1,106 +1,162 @@
-<%= form_for(@funcionario) do |f| %>
-  <% if @funcionario.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@funcionario.errors.count, "error") %> prohibited this funcionario from being saved:</h2>
+<%= simple_form_for(@funcionario, :html => {:class => 'form­horizontal', remote: true } ) do  |f| %>
 
-      <ul>
-      <% @funcionario.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <% if @funcionario.errors.any? %> 
+      <div id="error_explanation"> 
+       <h2><%= pluralize(@funcionario.errors.count, "error")   %> prohibited this funcionario from  
+      being saved:</h2> 
+       
+ 
+  <ul> 
+  <% @funcionario.errors.full_messages.each do |message| %> 
+  <li><%= message %></li> 
+  <% end %> 
+  </ul> 
+  </div> 
+<% end %> 
+ 
+<div class="form­-group"> 
+    <label for="name" class="col­-sm­-3 control­-label">Nombres</label>
+<div class="col­-md-­4"> 
+<%= f.input_field :nombres, class: 'form­-control' %> 
+</div> 
 
-  <div class="field">
-    <%= f.label :nombres %><br>
-    <%= f.text_field :nombres %>
+ <div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Apellidos</label>
+  <div class="col­-md-­4"> 
+     <%= f.input_field :apellidos, class: 'form­-control' %> 
+  </div> 
   </div>
-  <div class="field">
-    <%= f.label :apellidos %><br>
-    <%= f.text_field :apellidos %>
-  </div>
+
   <div class="field">
     Tipodoc <br> 
   <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :nombre, class: "form-control", prompt:
   "Seleccione tipo de documento " %>
   </div>
-  <div class="field">
-    <%= f.label :identificacion %><br>
-    <%= f.text_field :identificacion %>
 
-    <div class="field">
-    <%= f.label :lugar_de_expedicion %><br>
-    <%= f.text_field :lugar_de_expedicion %>
+  <div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Identificacion</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :identificacion, class: 'form­-control' %> 
+  </div> 
+  </div> 
+
+  <div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Lugar_de_expedicion</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :lugar_de_expedicion, class: 'form­-control' %> 
+  </div> 
+  </div> 
+
+  <div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Lugar_de_nacimiento</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :lugar_de_nacimiento, class: 'form­-control' %> 
+  </div> 
+  </div> 
+
+  <div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">fecha_de_nacimiento</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :fecha_de_nacimiento, class: 'form­-control' %> 
+  </div> 
+  </div> 
+
+  <div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Edad</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :edad, class: 'form­-control' %> 
+  </div> 
   </div>
-  <div class="field">
-    <%= f.label :lugar_de_nacimiento %><br>
-    <%= f.text_field :lugar_de_nacimiento %>
-  </div>
-  <div class="field">
-    <%= f.label :fecha_de_nacimiento %><br>
-    <%= f.date_select :fecha_de_nacimiento %>
-  </div>
-  <div class="field">
-    <%= f.label :edad %><br>
-    <%= f.text_field :edad %>
-  </div>
-  <div class="field">
-    <%= f.label :area %><br>
-    <%= f.text_field :area %>
-  </div>
-  <div class="field">
-    <%= f.label :cargo %><br>
-    <%= f.text_field :cargo%>
-  </div>
-  <div class="field">
-    <%= f.label :fecha_de_ingreso %><br>
-    <%= f.date_select :fecha_de_ingreso %>
-  </div>
-  <div class="field">
-    <%= f.label :antiguedad %><br>
-    <%= f.text_field :antiguedad %>
-  </div>
-  <div class="field">
-    <%= f.label :funciones_principales %><br>
-    <%= f.text_field :funciones_principales %>
-  </div>
-  </div>
-  <div class="field">
+
+  <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">Area</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :area, class: 'form­-control' %> 
+    </div> 
+   </div> 
+
+   <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">Cargo</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :cargo, class: 'form­-control' %> 
+    </div> 
+   </div>
+
+   <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">Fecha_de_ingreso</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :fecha_de_ingreso, class: 'form­-control' %> 
+    </div> 
+   </div>
+
+
+   <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">Antiguedad</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :antiguedad, class: 'form­-control' %> 
+    </div> 
+   </div>
+
+   <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">Funciones_principales</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :funciones_principales, class: 'form­-control' %> 
+    </div> 
+   </div>
+
+   <div class="field">
    Genero<br>
     Masculino: <%= f.radio_button(:genero, true) %>
     Femenino: <%= f.radio_button(:genero, false) %>
   </div>
-  <div class="field">
-    <%= f.label :telefono %><br>
-    <%= f.text_field :telefono %>
-  </div>
-  <div class="field">
-    <%= f.label :mail %><br>
-    <%= f.text_field :mail %>
-  </div>
-   <div class="field">
-  Centro <br>
-  <%= f.collection_select :centro_id, Centro.all, :id, :nombre, class: "form-control", prompt:
-  "Seleccione Centro" %>
+
+   <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">Telefono</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :telefono, class: 'form­-control' %> 
+    </div> 
    </div>
-  <div class="field">
-    <%= f.label :codigo %><br>
-    <%= f.text_field :codigo %>
-  </div>
-  <div class="field">
-    <%= f.label :eps %><br>
-    <%= f.text_field :eps %>
-  </div>
-  <div class="field">
-    <%= f.label :afp %><br>
-    <%= f.text_field :afp %>
-  </div>
-  <div class="field">
-    <%= f.label :arl %><br>
-    <%= f.text_field :arl %>
-  </div>
-  
-  <div class="actions">
-    <%= f.submit "Guardar" %>
-  </div>
-<% end %>
+
+    <div class="field">
+    Centro <br>
+    <%= f.collection_select :centro_id, Centro.all, :id, :nombre, class: "form-control", prompt:
+    "Seleccione Centro" %>
+   </div>
+
+   <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">Codigo</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :codigo, class: 'form­-control' %> 
+    </div> 
+   </div>
+
+   <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">eps</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :eps, class: 'form­-control' %> 
+    </div> 
+   </div>
+
+   <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">afp</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :afp, class: 'form­-control' %> 
+    </div> 
+   </div>
+
+   <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">arl</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :arl, class: 'form­-control' %> 
+    </div> 
+   </div>
+
+
+</div> 
+   <div class="form­-group"> 
+   <div class="col­-sm­-offset­-2 col-­sm­-10"> 
+   <%= f.submit "Guardar", class: "btn btn­-sm btn­-success" %> 
+   </div> 
+</div> 
+ 
+<% end %> 

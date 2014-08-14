@@ -1,3 +1,6 @@
+<div class='enfermedad'> 
+
+<br><br><br><br><br><br><br>
 <br><br><br><br><br><br>
 <div class="enfermedad">
 
@@ -24,5 +27,8 @@
 </p>
 
 </div>
-<%= link_to 'Editar', edit_enfermedad_path(@enfermedad) %> |
+
+<%= button_to 'Editar', edit_enfermedad_path(@enfermedad),:method=>"get", class: "btn btn-primary btn-xs", remote: true  %>
 <%= link_to 'Atras', enfermedads_path %>
+<hr>
+</div>
