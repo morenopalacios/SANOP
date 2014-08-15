@@ -1,6 +1,7 @@
 <tr id=<%= "enfermedad_#{enfermedad.id}" %>> 
    <td>
       <i class='icon-eye-view'></i>
+      <%= truncate(enfermedad.fecha) %>
       
    </td>
         <td><%= enfermedad.funcionario.nombres rescue nil %></td>

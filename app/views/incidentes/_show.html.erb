@@ -1,5 +1,8 @@
+<div class='incidente'> 
+
 <br><br><br><br><br><br><br>
-<div class="formulario">
+<br><br><br><br><br><br>
+<div class="incidente">
 
 <p id="notice"><%= notice %></p>
 
@@ -89,5 +92,8 @@
 </p>
 
 </div>
-<%= link_to 'Editar', edit_incidente_path(@incidente) %> |
+
+<%= button_to 'Editar', edit_incidente_path(@incidente),:method=>"get", class: "btn btn-primary btn-xs", remote: true  %>
 <%= link_to 'Atras', incidentes_path %>
+<hr>
+</div>
