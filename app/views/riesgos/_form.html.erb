@@ -13,8 +13,6 @@
   </div> 
 <% end %> 
 
-  
-  
 
    <div class="form­-group"> 
     <label for="name" class="col-­sm-­3 control­-label">empresa</label>  
@@ -34,108 +32,98 @@
     <div class="col­-md-­4"> 
        <%= f.input_field :fecha, class: 'form­-control' %> 
     </div> 
-   </div>
-
-
-   <div class="field">
-    lugar de ocurrencia<br>
-    dentro de la entidad: <%= f.radio_button(:lugar_de_ocurrencia, true) %>
-    fuera de la entidad: <%= f.radio_button(:lugar_de_ocurrencia, false) %>
   </div>
 
-   
+  <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">Area de seccion o puesto de trabajo</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :areadeseccionopuestodetrabajo, class: 'form­-control' %> 
+    </div>
+ </div>
+
+<div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">Clase de riesgo</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :clasederiesgo, class: 'form­-control' %> 
+    </div>
+ </div>
+
+ <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">Factor de riesgo</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :factorderiesgo, class: 'form­-control' %> 
+    </div>
+ </div>
+
+ <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">Fuente generadora</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :fuentegeneradora, class: 'form­-control' %> 
+    </div>
+ </div>
+
+ <div class="form­-group"> 
+    <label for="name" class="col-­sm-­3 control­-label">Efecto conocido</label>  
+    <div class="col­-md-­4"> 
+       <%= f.input_field :efectoconocido, class: 'form­-control' %> 
+    </div>
+ </div>
 
    <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Hora_del_reporte</label>  
+    <label for="name" class="col-­sm-­3 control­-label">Numero de expuestos</label>  
     <div class="col­-md-­4"> 
-       <%= f.input_field :hora_del_reporte, class: 'form­-control' %> 
+       <%= f.input_field :numerodeexpuestos, class: 'form­-control' %> 
     </div> 
    </div>
 
-   <h5>PERSONAL INVOLUCRADO</h5>
-  <div class="field">
-    personal  <br>
-    <%= f.collection_select :personalinvolucrado_id, Personalinvolucrado.all, :id, :nombre, class: "form-control", prompt:
-    "Seleccione personal" %>
-  </div> 
-
    <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Otro</label>  
+    <label for="name" class="col-­sm-­3 control­-label">Tiempo</label>  
     <div class="col­-md-­4"> 
-       <%= f.input_field :otro, class: 'form­-control' %> 
+       <%= f.input_field :tiempo, class: 'form­-control' %> 
     </div> 
    </div>
 
    <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Especifique</label>  
+    <label for="name" class="col-­sm-­3 control­-label">Controles exitentes</label>  
     <div class="col­-md-­4"> 
-       <%= f.input_field :especifique, class: 'form­-control' %> 
+       <%= f.input_field :controlesexitentes, class: 'form­-control' %> 
     </div> 
    </div>
 
    <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Nombre_completo1</label>  
+    <label for="name" class="col-­sm-­3 control­-label">Controles recomendados</label>  
     <div class="col­-md-­4"> 
-       <%= f.input_field :nombre_completo1, class: 'form­-control' %> 
+       <%= f.input_field :controlesrecomendados, class: 'form­-control' %> 
     </div> 
    </div>
 
    <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Email1</label>  
+    <label for="name" class="col-­sm-­3 control­-label">Consecuencia</label>  
     <div class="col­-md-­4"> 
-       <%= f.input_field :email1, class: 'form­-control' %> 
+       <%= f.input_field :consecuencia, class: 'form­-control' %> 
     </div> 
    </div>
 
   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Telefono1</label>  
+    <label for="name" class="col-­sm-­3 control­-label">Exposición</label>  
     <div class="col­-md-­4"> 
-       <%= f.input_field :telefono1, class: 'form­-control' %> 
+       <%= f.input_field :exposicion, class: 'form­-control' %> 
     </div> 
    </div>
 
    <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Nombre_completo2</label>  
+    <label for="name" class="col-­sm-­3 control­-label">Factor de ponderacion</label>  
     <div class="col­-md-­4"> 
-       <%= f.input_field :nombre_completo2, class: 'form­-control' %> 
+       <%= f.input_field :factordeponderacion, class: 'form­-control' %> 
     </div> 
    </div>
    
    <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Email2</label>  
+    <label for="name" class="col-­sm-­3 control­-label">Repercucion del riesgo</label>  
     <div class="col­-md-­4"> 
-       <%= f.input_field :email2, class: 'form­-control' %> 
+       <%= f.input_field :repercuciondelriesgo, class: 'form­-control' %> 
     </div> 
    </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Telefono2</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :telefono2, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Descripcion_del_evento</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :descripcion_del_evento, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Nombre_del_dilenciador</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :nombre_del_dilenciador, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-    <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Nombre_de_lider_de_informe</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :nombre_de_lider_de_informe, class: 'form­-control' %> 
-    </div> 
-   </div>
-
 
 </div> 
    <div class="form­-group"> 

@@ -24,7 +24,7 @@ class IncidentesController < ApplicationController
   end 
  
   def update 
-        render action: :edit unless @incidente.update_attributes(funcionario_params) 
+        render action: :edit unless @incidente.update_attributes(incidente_params) 
   end 
  
   def destroy 
@@ -38,7 +38,7 @@ class IncidentesController < ApplicationController
   end 
  
   # Never trust parameters from the scary internet, only allow the white list through. 
-  def funcionario_params         
+  def incidente_params         
     params.require(:incidente).permit(:centro_id, :area_o_proceso, :lugar_de_ocurrencia, :fecha_del_reporte, :hora_del_reporte, :funcionario_id, :personalinvolucrado_id, :otro, :especifique, :nombre_completo1, :email1, :telefono1, :nombre_completo2, :email2, :telefono2, :descripcion_del_evento, :nombre_del_dilenciador, :nombre_de_lider_de_informe) 
   end 
 

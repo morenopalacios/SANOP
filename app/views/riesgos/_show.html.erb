@@ -1,99 +1,93 @@
-<div class='incidente'> 
-
+<div class='riesgo'> 
 <br><br><br><br><br><br><br>
 <br><br><br><br><br><br>
-<div class="incidente">
+<div class="riesgo">
 
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Area o proceso:</strong>
-  <%= @incidente.area_o_proceso %>
-</p>
-
-<p>
-  <strong>Lugar de ocurrencia:</strong>
- <%= mostrar_lugar_de_ocurrencia(@incidente.lugar_de_ocurrencia) %>
-</p>
-
-<p>
-  <strong>Fecha del reporte:</strong>
-  <%= @incidente.fecha_del_reporte %>
-</p>
-
-<p>
-  <strong>Hora del reporte:</strong>
-  <%= @incidente.hora_del_reporte %>
+  <strong>Empresa:</strong>
+  <%= @riesgo.empresa %>
 </p>
 
 <p>
   <strong>Funcionario:</strong>
-  <%= @incidente.funcionario.nombres rescue nil %>
+  <%= @riesgo.funcionario.nombres rescue nil%>
 </p>
 
 <p>
-  <strong>Personal_involucrado:</strong>
-  <%= @incidente.personalinvolucrado.nombre rescue nil %>
+  <strong>Fecha:</strong>
+  <%= @riesgo.fecha %>
 </p>
 
 <p>
-  <strong>Otro:</strong>
-  <%= @incidente.otro %>
+  <strong>Area de seccion o puesto de trabajo:</strong>
+  <%= @riesgo.areadeseccionopuestodetrabajo %>
 </p>
 
 <p>
-  <strong>Especifique:</strong>
-  <%= @incidente.especifique %>
+  <strong>Clase de riesgo:</strong>
+  <%= @riesgo.clasederiesgo %>
 </p>
 
 <p>
-  <strong>Nombre completo1:</strong>
-  <%= @incidente.nombre_completo1 %>
+  <strong>Factor de riesgo:</strong>
+  <%= @riesgo.factorderiesgo %>
 </p>
 
 <p>
-  <strong>Email1:</strong>
-  <%= @incidente.email1 %>
+  <strong>Fuente generadora:</strong>
+  <%= @riesgo.fuentegeneradora %>
 </p>
 
 <p>
-  <strong>Telefono1:</strong>
-  <%= @incidente.telefono1 %>
+  <strong>Efecto conocido:</strong>
+  <%= @riesgo.efectoconocido %>
 </p>
 
 <p>
-  <strong>Nombre completo2:</strong>
-  <%= @incidente.nombre_completo2 %>
+  <strong>Numero de expuestos:</strong>
+  <%= @riesgo.numerodeexpuestos %>
 </p>
 
 <p>
-  <strong>Email2:</strong>
-  <%= @incidente.email2 %>
+  <strong>Tiempo:</strong>
+  <%= @riesgo.tiempo %>
 </p>
 
 <p>
-  <strong>Telefono2:</strong>
-  <%= @incidente.telefono2 %>
+  <strong>Controles exitentes:</strong>
+  <%= @riesgo.controlesexitentes %>
 </p>
 
 <p>
-  <strong>Descripcion del evento:</strong>
-  <%= @incidente.descripcion_del_evento %>
+  <strong>Controles recomendados:</strong>
+  <%= @riesgo.controlesrecomendados %>
 </p>
 
 <p>
-  <strong>Nombre del dilenciador:</strong>
-  <%= @incidente.nombre_del_dilenciador %>
+  <strong>Consecuencia:</strong>
+  <%= @riesgo.consecuencia %>
 </p>
 
 <p>
-  <strong>Nombre de lider de informe:</strong>
-  <%= @incidente.nombre_de_lider_de_informe %>
+  <strong>Exposicion:</strong>
+  <%= @riesgo.exposicion %>
+</p>
+
+<p>
+  <strong>Factor de ponderacion:</strong>
+  <%= @riesgo.factordeponderacion %>
+</p>
+
+<p>
+  <strong>Repercucion del riesgo:</strong>
+  <%= @riesgo.repercuciondelriesgo %>
 </p>
 
 </div>
 
-<%= button_to 'Editar', edit_incidente_path(@incidente),:method=>"get", class: "btn btn-primary btn-xs", remote: true  %>
-<%= link_to 'Atras', incidentes_path %>
+<%= button_to 'Editar', edit_riesgo_path(@riesgo),:method=>"get", class: "btn btn-primary btn-xs", remote: true  %>
+<%= link_to 'Atras', riesgos_path %>
 <hr>
 </div>

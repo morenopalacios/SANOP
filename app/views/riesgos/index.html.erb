@@ -1,6 +1,6 @@
 <br><br><br><br><br>
-<h1>Listado incidentes</h1>
-	<%= form_tag incidentes_path, :method => 'get' do %>
+<h1>Listado riesgos</h1>
+	<%= form_tag riesgo_path, :method => 'get' do %>
 	<% content_tag :label do %>
 	fecha:
 	<%= text_field_tag :search, params[:search] %>
@@ -11,20 +11,22 @@
 <table class="table">
   <thead>
     <tr>
-       <th>Funcionario</th>
-      <th>Area o proceso</th>
-      <th>Lugar de ocurrencia</th>
-      <th>Fecha del reporte</th>
-      <th>Hora del reporte</th>
-      <th>Personalinvolucrado</th>
-      <th>Otro</th>
-      <th>Especifique</th>
-      <th>Nombre completo1</th>
-      <th>Email1</th>
-      <th>Telefono1</th>
-      <th>Nombre completo2</th>
-      <th>Email2</th>
-      <th>Telefono2</th>
+      <th>Empresa</th>
+      <th>Funcionario</th>
+      <th>Fecha</th>
+      <th>Area de seccion o puesto de trabajo</th>
+      <th>Clase de riesgo</th>
+      <th>Factor de riesgo</th>
+      <th>Fuente generadora</th>
+      <th>Efecto conocido</th>
+      <th>Numero de expuestos</th>
+      <th>Tiempo</th>
+      <th>Controles exitentes</th>
+      <th>Controles recomendados</th>
+      <th>Consecuencia</th>
+      <th>Exposicion</th>
+      <th>Factor de ponderacion</th>
+      <th>Repercucion del riesgo</th>
       
       
       <th colspan="3">Opciones</th>
@@ -32,16 +34,16 @@
   </thead>
 
   <tbody>
-     <%= render @incidentes %>
+     <%= render @riesgos %>
   </tbody>
 </table>
 
 <br>
  
-<%= button_to 'Nueva Incidente', new_incidente_path, remote: true, :method=>"get", class: "btn btn-primary btn-xs" %> 
+<%= button_to 'Nueva Riesgo', new_riesgo_path, remote: true, :method=>"get", class: "btn btn-primary btn-xs" %> 
 
-<%= will_paginate @incidentes, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente &raquo;' %>
+<%= will_paginate @riesgos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente &raquo;' %>
 <br>
-Incidentes: <%= @incidentes.count %>
+Riesgos: <%= @riesgos.count %>
  
 

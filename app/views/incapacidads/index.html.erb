@@ -1,8 +1,14 @@
-<br><br><br><br><br><br>
+<br><br><br><br><br>
+<h1>Listado incapacidads</h1>
+	<%= form_tag incapacidads_path, :method => 'get' do %>
+	<% content_tag :label do %>
+	Fecha inicio:
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "Buscar", :name => nil %>
+	<% end %>
+	<% end %>
 
-<h1>Lista incapacidads</h1>
-
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Funcionario</th>
@@ -13,29 +19,22 @@
       <th>Prorroga</th>
       <th>Numero inpacacidad</th>
       <th>Origen de la incapacidad</th>
-      <th colspan="3">acciones</th>
+      
+      <th colspan="3">Opciones</th>
     </tr>
   </thead>
 
   <tbody>
-    <% @incapacidads.each do |incapacidad| %>
-      <tr>
-        <td><%= incapacidad.funcionario.nombres rescue nil %></td>
-        <td><%= incapacidad.fechainicio %></td>
-        <td><%= incapacidad.fechaterminacion %></td>
-        <td><%= incapacidad.totaldias %></td>
-        <td><%= incapacidad.diasacobrar %></td>
-        <td><%= incapacidad.prorroga %></td>
-        <td><%= incapacidad.numeroinpacacidad %></td>
-        <td><%= incapacidad.origendelaincapacidad %></td>
-        <td><%= link_to 'Ver', incapacidad %></td>
-        <td><%= link_to 'Editar', edit_incapacidad_path(incapacidad) %></td>
-        <td><%= link_to 'Eliminar', incapacidad, method: :delete, data: { confirm: 'Está seguro que desea eliminar el registro?' } %></td>
-      </tr>
-    <% end %>
+     <%= render @incapacidads %>
   </tbody>
 </table>
 
 <br>
+ 
+<%= button_to 'Nueva Incapacidad', new_incapacidad_path, remote: true, :method=>"get", class: "btn btn-primary btn-xs" %> 
 
-<%= link_to 'Nueva Incapacidad', new_incapacidad_path %>
+<%= will_paginate @incapacidads, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente &raquo;' %>
+<br>
+Incapacidads: <%= @incapacidad.count %>
+ 
+

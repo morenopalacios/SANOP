@@ -21,7 +21,7 @@ class EnfermedadsController < ApplicationController
   end 
  
   def update 
-        render action: :edit unless @enfermedad.update_attributes(funcionario_params) 
+        render action: :edit unless @enfermedad.update_attributes(enfermedad_params) 
   end 
  
   def destroy 
