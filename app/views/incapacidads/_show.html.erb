@@ -1,34 +1,52 @@
-<div class='enfermedad'> 
-
+<div class='formulario'> 
 <br><br><br><br><br><br><br>
 <br><br><br><br><br><br>
-<div class="enfermedad">
+<div class="incapacidad">
 
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Funcionario:</strong>
-  <%= @enfermedad.funcionario.nombres rescue nil %>
+  <%= @incapacidad.funcionario.nombres rescue nil%>
+</p>
+<p>
+  <strong>Fecha inicio:</strong>
+  <%= @incapacidad.fechainicio %>
 </p>
 
 <p>
-  <strong>Descripcion:</strong>
-  <%= @enfermedad.descripcion %>
+  <strong>Fecha terminacion:</strong>
+  <%= @incapacidad.fechaterminacion %>
 </p>
 
 <p>
-  <strong>fecha:</strong>
-  <%= @enfermedad.fecha %>
+  <strong>Total dias:</strong>
+  <%= @incapacidad.totaldias %>
 </p>
 
 <p>
-  <strong>Codigo de diagnostico:</strong>
-  <%= @enfermedad.codigodediagnostico %>
+  <strong>Dias acobrar:</strong>
+  <%= @incapacidad.diasacobrar %>
+</p>
+
+<p>
+  <strong>Prorroga:</strong>
+  <%= @incapacidad.prorroga %>
+</p>
+
+<p>
+  <strong>Numero inpacacidad:</strong>
+  <%= @incapacidad.numeroinpacacidad %>
+</p>
+
+<p>
+  <strong>Origen de la incapacidad:</strong>
+  <%= @incapacidad.origendelaincapacidad %>
 </p>
 
 </div>
 
-<%= button_to 'Editar', edit_enfermedad_path(@enfermedad),:method=>"get", class: "btn btn-primary btn-xs", remote: true  %>
-<%= link_to 'Atras', enfermedads_path %>
+<%= button_to 'Editar', edit_incapacidad_path(@incapacidad),:method=>"get", class: "btn btn-primary btn-xs", remote: true  %>
+<%= link_to 'Atras', incapacidads_path %>
 <hr>
 </div>
