@@ -2,7 +2,7 @@
 
   <% if @riesgo.errors.any? %> 
       <div id="error_explanation"> 
-       <h2><%= pluralize(@riesgo.errors.count, "error")   %> prohibited this riesgo from  
+       <h2><%= pluralize(@riesgo.errors.count, "error") %> prohibited this riesgo from  
       being saved:</h2> 
        
   <ul> 
@@ -12,121 +12,120 @@
   </ul> 
   </div> 
 <% end %> 
+ 
+<div class="form­-group"> 
+  <label for="name" class="col­-sm­-3 control­-label">Empresa</label>
+  <div class="col­-md-­4"> 
+  <%= f.input_field :empresa, class: 'form­-control' %> 
+  </div> 
+</div> 
 
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">empresa</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :empresa, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="field">
-    funcionarios <br>
-    <%= f.collection_select :funcionario_id, Funcionario.all, :id, :nombres, class: "form-control", prompt:
-    "Seleccione Funcionario" %>
-  </div>
-
-  <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Fecha</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :fecha, class: 'form­-control' %> 
-    </div> 
-  </div>
-
-  <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Area de seccion o puesto de trabajo</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :areadeseccionopuestodetrabajo, class: 'form­-control' %> 
-    </div>
- </div>
+<div class="field">
+  funcionarios <br>
+  <%= f.collection_select :funcionario_id, Funcionario.all, :id, :nombres, class: "form-control", prompt:
+  "Seleccione Funcionario" %>
+</div>
 
 <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Clase de riesgo</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :clasederiesgo, class: 'form­-control' %> 
-    </div>
- </div>
+  <label for="name" class="col-­sm-­3 control­-label">Fecha</label>
+  <div class="col­-md-­4"> 
+     <%= f.input_field :fecha, class: 'form­-control' %> 
+  </div> 
+</div>
 
- <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Factor de riesgo</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :factorderiesgo, class: 'form­-control' %> 
-    </div>
- </div>
-
- <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Fuente generadora</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :fuentegeneradora, class: 'form­-control' %> 
-    </div>
- </div>
-
- <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Efecto conocido</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :efectoconocido, class: 'form­-control' %> 
-    </div>
- </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Numero de expuestos</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :numerodeexpuestos, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Tiempo</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :tiempo, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Controles exitentes</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :controlesexitentes, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Controles recomendados</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :controlesrecomendados, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Consecuencia</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :consecuencia, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-  <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Exposición</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :exposicion, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Factor de ponderacion</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :factordeponderacion, class: 'form­-control' %> 
-    </div> 
-   </div>
-   
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Repercucion del riesgo</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :repercuciondelriesgo, class: 'form­-control' %> 
-    </div> 
-   </div>
-
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Area de seccion o puesto de trabajo</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :areadeseccionopuestodetrabajo, class: 'form­-control' %> 
+  </div> 
 </div> 
-   <div class="form­-group"> 
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Clase de riesgo</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :clasederiesgo, class: 'form­-control' %> 
+  </div> 
+</div> 
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Factor de riesgo</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :factorderiesgo, class: 'form­-control' %> 
+  </div> 
+</div> 
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Fuente generadora</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :fuentegeneradora, class: 'form­-control' %> 
+  </div> 
+</div> 
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Efecto conocido</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :efectoconocido, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Numero de expuestos</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :numerodeexpuestos, class: 'form­-control' %> 
+  </div> 
+</div> 
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Tiempo</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :tiempo, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Controles exitentes</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :controlesexitentes, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Controles recomendados</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :controlesrecomendados, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Consecuencia</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :consecuencia, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Exposicion</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :exposicion, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Factor de ponderacion</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :factordeponderacion, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Repercucion del riesgo</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :repercuciondelriesgo, class: 'form­-control' %> 
+  </div> 
+</div>
+
+ 
+<div class="form­-group"> 
    <div class="col­-sm­-offset­-2 col-­sm­-10"> 
    <%= f.submit "Guardar", class: "btn btn­-sm btn­-success" %> 
    </div> 

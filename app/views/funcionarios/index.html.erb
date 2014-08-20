@@ -2,7 +2,7 @@
 <h1>Listado funcionarios</h1>
 	<%= form_tag funcionarios_path, :method => 'get' do %>
 	<% content_tag :label do %>
-	nombre:
+	Nombre:
 	<%= text_field_tag :search, params[:search] %>
 	<%= submit_tag "Buscar", :name => nil %>
 	<% end %>

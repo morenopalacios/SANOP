@@ -5,7 +5,6 @@
        <h2><%= pluralize(@funcionario.errors.count, "error")   %> prohibited this funcionario from  
       being saved:</h2> 
        
- 
   <ul> 
   <% @funcionario.errors.full_messages.each do |message| %> 
   <li><%= message %></li> 
@@ -15,145 +14,145 @@
 <% end %> 
  
 <div class="form­-group"> 
-    <label for="name" class="col­-sm­-3 control­-label">Nombres</label>
-<div class="col­-md-­4"> 
-<%= f.input_field :nombres, class: 'form­-control' %> 
+  <label for="name" class="col­-sm­-3 control­-label">Nombres</label>
+  <div class="col­-md-­4"> 
+  <%= f.input_field :nombres, class: 'form­-control' %> 
+  </div> 
 </div> 
 
- <div class="form­-group"> 
+<div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Apellidos</label>
   <div class="col­-md-­4"> 
      <%= f.input_field :apellidos, class: 'form­-control' %> 
   </div> 
-  </div>
+</div>
 
-  <div class="field">
-    Tipodoc <br> 
+<div class="field">
+  Tipodoc <br> 
   <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :nombre, class: "form-control", prompt:
   "Seleccione tipo de documento " %>
-  </div>
+</div>
 
-  <div class="form­-group"> 
+<div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Identificacion</label>  
   <div class="col­-md-­4"> 
      <%= f.input_field :identificacion, class: 'form­-control' %> 
   </div> 
-  </div> 
+</div> 
 
-  <div class="form­-group"> 
+<div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Lugar_de_expedicion</label>  
   <div class="col­-md-­4"> 
      <%= f.input_field :lugar_de_expedicion, class: 'form­-control' %> 
   </div> 
-  </div> 
+</div> 
 
-  <div class="form­-group"> 
+<div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Lugar_de_nacimiento</label>  
   <div class="col­-md-­4"> 
      <%= f.input_field :lugar_de_nacimiento, class: 'form­-control' %> 
   </div> 
-  </div> 
+</div> 
 
-  <div class="form­-group"> 
+<div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">fecha_de_nacimiento</label>  
   <div class="col­-md-­4"> 
      <%= f.input_field :fecha_de_nacimiento, class: 'form­-control' %> 
   </div> 
-  </div> 
+</div> 
 
-  <div class="form­-group"> 
+<div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Edad</label>  
   <div class="col­-md-­4"> 
      <%= f.input_field :edad, class: 'form­-control' %> 
   </div> 
-  </div>
+</div>
 
-  <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Area</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :area, class: 'form­-control' %> 
-    </div> 
-   </div> 
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Cargo</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :cargo, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Fecha_de_ingreso</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :fecha_de_ingreso, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Antiguedad</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :antiguedad, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Funciones_principales</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :funciones_principales, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="field">
-   Genero<br>
-    Masculino: <%= f.radio_button(:genero, true) %>
-    Femenino: <%= f.radio_button(:genero, false) %>
-  </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Telefono</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :telefono, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-    <div class="field">
-    Centro <br>
-    <%= f.collection_select :centro_id, Centro.all, :id, :nombre, class: "form-control", prompt:
-    "Seleccione Centro" %>
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">Codigo</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :codigo, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">eps</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :eps, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">afp</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :afp, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-   <div class="form­-group"> 
-    <label for="name" class="col-­sm-­3 control­-label">arl</label>  
-    <div class="col­-md-­4"> 
-       <%= f.input_field :arl, class: 'form­-control' %> 
-    </div> 
-   </div>
-
-
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Area</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :area, class: 'form­-control' %> 
+  </div> 
 </div> 
-   <div class="form­-group"> 
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Cargo</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :cargo, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Fecha_de_ingreso</label>  
+  <div class="col­-md-­4"> 
+   <%= f.input_field :fecha_de_ingreso, class: 'form­-control' %> 
+  </div> 
+</div>
+
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Antiguedad</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :antiguedad, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Funciones_principales</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :funciones_principales, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="field">
+  Genero<br>
+  Masculino: <%= f.radio_button(:genero, true) %>
+  Femenino: <%= f.radio_button(:genero, false) %>
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Telefono</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :telefono, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="field">
+   Centro <br>
+  <%= f.collection_select :centro_id, Centro.all, :id, :nombre, class: "form-control", prompt:
+  "Seleccione Centro" %>
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">Codigo</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :codigo, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">eps</label>  
+  <div class="col­-md-­4"> 
+   <%= f.input_field :eps, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">afp</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :afp, class: 'form­-control' %> 
+  </div> 
+</div>
+
+<div class="form­-group"> 
+  <label for="name" class="col-­sm-­3 control­-label">arl</label>  
+  <div class="col­-md-­4"> 
+     <%= f.input_field :arl, class: 'form­-control' %> 
+  </div> 
+</div>
+
+
+<div class="form­-group"> 
    <div class="col­-sm­-offset­-2 col-­sm­-10"> 
    <%= f.submit "Guardar", class: "btn btn­-sm btn­-success" %> 
    </div> 

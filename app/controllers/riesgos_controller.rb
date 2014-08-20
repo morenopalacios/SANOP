@@ -1,4 +1,4 @@
-class RiesgosController < ApplicationController 
+class RiesgosController  < ApplicationController 
   
   before_action :set_riesgo, only: [:show, :edit, :update, :destroy] 
  
@@ -44,4 +44,35 @@ class RiesgosController < ApplicationController
 
  
 end 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
