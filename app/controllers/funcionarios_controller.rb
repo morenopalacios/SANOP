@@ -18,14 +18,32 @@ class FuncionariosController < ApplicationController
   def edit 
   end 
  
-  def create 
-       @funcionario = Funcionario.new(funcionario_params) 
-       render action: :new unless @funcionario.save 
-  end 
- 
-  def update 
-        render action: :edit unless @funcionario.update_attributes(funcionario_params) 
-  end 
+  
+  def create
+     @funcionario = Funcionario.new(funcionario_params) 
+
+    respond_to do |format|
+      if @funcionario.save
+        format.html { redirect_to @funcionario, notice: 'funcionario was successfully created.' }
+        format.json { render :show, status: :created, location: @funcionario }
+      else
+        format.html { render :new }
+        format.json { render json: @funcionario.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+   def update
+    respond_to do |format|
+      if @funcionario.update(funcionario_params)
+        format.html { redirect_to @funcionario, notice: 'funcionario was successfully updated.' }
+        format.json { render :show, status: :ok, location: @funcionario }
+      else
+        format.html { render :edit }
+        format.json { render json: @funcionario.errors, status: :unprocessable_entity }
+      end
+    end
+  end
  
   def destroy 
        @funcionario.destroy 

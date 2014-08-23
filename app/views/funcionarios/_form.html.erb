@@ -1,4 +1,4 @@
-<%= simple_form_for(@funcionario, :html => {:class => 'form­horizontal', remote: true } ) do  |f| %>
+<%= simple_form_for(@funcionario, :html => {:class => 'form­-horizontal' }) do  |f| %>
 
   <% if @funcionario.errors.any? %> 
       <div id="error_explanation"> 
@@ -15,17 +15,20 @@
  
 <div class="form­-group"> 
   <label for="name" class="col­-sm­-3 control­-label">Nombres</label>
-  <div class="col­-md-­4"> 
-  <%= f.input_field :nombres, class: 'form­-control' %> 
+  <div class="col­-sm-­8"> 
+       <%= f.text_field :nombres, class: 'form­-control' %> 
   </div> 
 </div> 
+
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Apellidos</label>
   <div class="col­-md-­4"> 
-     <%= f.input_field :apellidos, class: 'form­-control' %> 
+     <%= f.input_field :apellidos, class: 'form­-control', :label => false  %> 
   </div> 
 </div>
+
+
 
 <div class="field">
   Tipodoc <br> 
@@ -36,56 +39,56 @@
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Identificacion</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :identificacion, class: 'form­-control' %> 
+     <%= f.input :identificacion, class: 'form­-control', :label => false  %> 
   </div> 
 </div> 
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Lugar_de_expedicion</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :lugar_de_expedicion, class: 'form­-control' %> 
+     <%= f.input :lugar_de_expedicion, class: 'form­-control', :label => false  %> 
   </div> 
 </div> 
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Lugar_de_nacimiento</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :lugar_de_nacimiento, class: 'form­-control' %> 
+     <%= f.input :lugar_de_nacimiento, class: 'form­-control', :label => false  %> 
   </div> 
 </div> 
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">fecha_de_nacimiento</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :fecha_de_nacimiento, class: 'form­-control' %> 
+     <%= f.input :fecha_de_nacimiento, class: 'form­-control', :label => false  %> 
   </div> 
 </div> 
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Edad</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :edad, class: 'form­-control' %> 
+     <%= f.input :edad, class: 'form­-control', :label => false  %> 
   </div> 
 </div>
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Area</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :area, class: 'form­-control' %> 
+     <%= f.input :area, class: 'form­-control', :label => false  %> 
   </div> 
 </div> 
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Cargo</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :cargo, class: 'form­-control' %> 
+     <%= f.input :cargo, class: 'form­-control', :label => false  %> 
   </div> 
 </div>
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Fecha_de_ingreso</label>  
   <div class="col­-md-­4"> 
-   <%= f.input_field :fecha_de_ingreso, class: 'form­-control' %> 
+   <%= f.input :fecha_de_ingreso, class: 'form­-control', :label => false  %> 
   </div> 
 </div>
 
@@ -93,14 +96,14 @@
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Antiguedad</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :antiguedad, class: 'form­-control' %> 
+     <%= f.input :antiguedad, class: 'form­-control', :label => false  %> 
   </div> 
 </div>
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Funciones_principales</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :funciones_principales, class: 'form­-control' %> 
+     <%= f.input :funciones_principales, class: 'form­-control', :label => false  %> 
   </div> 
 </div>
 
@@ -113,7 +116,7 @@
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Telefono</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :telefono, class: 'form­-control' %> 
+     <%= f.input :telefono, class: 'form­-control', :label => false  %> 
   </div> 
 </div>
 
@@ -126,28 +129,28 @@
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Codigo</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :codigo, class: 'form­-control' %> 
+     <%= f.input :codigo, class: 'form­-control', :label => false %> 
   </div> 
 </div>
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">eps</label>  
   <div class="col­-md-­4"> 
-   <%= f.input_field :eps, class: 'form­-control' %> 
+   <%= f.input :eps, class: 'form­-control', :label => false  %> 
   </div> 
 </div>
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">afp</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :afp, class: 'form­-control' %> 
+     <%= f.input :afp, class: 'form­-control', :label => false  %> 
   </div> 
 </div>
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">arl</label>  
   <div class="col­-md-­4"> 
-     <%= f.input_field :arl, class: 'form­-control' %> 
+     <%= f.input :arl, class: 'form­-control', :label => false  %> 
   </div> 
 </div>
 
