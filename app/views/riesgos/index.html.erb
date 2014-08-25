@@ -33,7 +33,7 @@
 
 <br>
  
-<%= button_to 'Nuevo Riesgo', new_riesgo_path, remote: true, :method=>"get", class: "btn btn-primary btn-xs" %> 
+<%= button_to 'Nuevo Riesgo', new_riesgo_path, :method=>"get", class: "btn btn-primary btn-xs" %> 
 
 <%= will_paginate @riesgos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente &raquo;' %>
 <br>

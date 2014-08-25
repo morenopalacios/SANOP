@@ -13,18 +13,19 @@
   </div> 
 <% end %> 
  
-<div class="form­-group"> 
-  <label for="name" class="col­-sm­-3 control­-label">Nombres</label>
-  <div class="col­-sm-­8"> 
-       <%= f.text_field :nombres, class: 'form­-control' %> 
-  </div> 
-</div> 
+
+
+ <div class="form-group">
+   <%= f.label :nombres, class: "control-label col-sm-3" %>
+   <div class="col-sm-4">
+      <%= f.input :nombres, class: "form-control", label: false %></div>
+</div>
 
 
 <div class="form­-group"> 
   <label for="name" class="col-­sm-­3 control­-label">Apellidos</label>
   <div class="col­-md-­4"> 
-     <%= f.input_field :apellidos, class: 'form­-control', :label => false  %> 
+     <%= f.input :apellidos, class: 'form­-control', :label => false  %> 
   </div> 
 </div>
 
